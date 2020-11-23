@@ -1,0 +1,48 @@
+version: "3"
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app/src
+    networks:
+      - nginx_network
+      - postgres_network
+    environment:
+      - POSTGRES_HOST=postgres
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_DB=db
+    depends_on:
+      - postgres
+
+  nginx:
+    image: nginx
+    ports:
+      - 8000:80
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+      - static_volume:/app/src/static
+      - media_volume:/app/src/media
+    networks:
+      - nginx_network
+    depends_on:
+      - app
+
+  postgres:
+    image: postgres
+    env_file: .env
+    volumes:
+      - postgres_volume:/var/lib/postgresql/data
+    networks:
+      - postgres_network
+
+networks:
+  nginx_network:
+    driver: bridge
+  postgres_network:
+    driver: bridge
+
+volumes:
+  postgres_volume:
+  static_volume:
+  media_volume:
