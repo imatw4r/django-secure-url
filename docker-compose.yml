@@ -4,6 +4,8 @@ services:
     build: .
     volumes:
       - .:/app/src
+      - static_volume:/app/src/static
+      - media_volume:/app/src/media
     networks:
       - nginx_network
       - postgres_network
