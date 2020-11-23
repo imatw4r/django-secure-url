@@ -1,1 +1,1 @@
-web: gunicorn --chdir secure_urls secure_urls.secure_urls.wsgi --bind :8000 --log-syslog
+web: gunicorn --chdir secure_urls secure_urls.secure_urls.wsgi --log-syslog
