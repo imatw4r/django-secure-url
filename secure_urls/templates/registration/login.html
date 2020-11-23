@@ -1,4 +1,8 @@
-<p>Please login to use appliaction.</p>
+<p>
+  Please login to use appliaction.<br />
+  Default user: admin <br />
+  Default password: admin
+</p>
 <form method="post">
   {% csrf_token %} {{ form.as_p }}
   <button type="submit">Login</button>
