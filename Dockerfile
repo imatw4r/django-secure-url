@@ -9,6 +9,7 @@ WORKDIR /app/src
 
 COPY Pipfile .
 COPY Pipfile.lock .
+COPY entrypoint.sh .
 
 RUN pip install pipenv && pipenv install --system --sequential
 
@@ -16,4 +17,4 @@ COPY secure_urls .
 
 EXPOSE 8000
 
-CMD gunicorn --chdir secure_urls --bind :8000 secure_urls.wsgi
+CMD bash entrypoint.sh
