@@ -15,12 +15,12 @@
 
 # Requirements
 - python3.7+
-- poetry
+- pipenv
 - docker
 - docker-compose
 
 # Running application
-1. In root folder execute command `poetry install` to install dependencies
+1. In root folder execute command `pipenv install` to install dependencies
 2. 
 
 
