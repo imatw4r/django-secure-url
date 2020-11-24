@@ -10,3 +10,4 @@ router.register(
     views.FileRedirectRetrieveModelViewSet,
 )
 router.register("url/redirect", views.UrlRedirectRetrieveModelViewSet)
+router.register("stats/overall", views.ElementRedirectListStatisticsViewSet)
