@@ -6,9 +6,9 @@
 - [x] A form that allows you to go to a secured link or download a protected file
 - [x] Counting correct redirects
 - [x] User Agent saving
-- [ ] REST API
+- [x] REST API
 - [x] The secured endpoint for adding elements
-- [ ] The secured endpoint for downloading statistics (see example)
+- [x] The secured endpoint for downloading statistics
 - [x] An open endpoint to access secure items (if the password was correct)
 - [x] Admin panel
 
