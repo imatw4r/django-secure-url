@@ -12,15 +12,14 @@
 - [x] An open endpoint to access secure items (if the password was correct)
 - [x] Admin panel
 
-
 # Requirements
-- python3.7+
+
+- python3.8
 - pipenv
 - docker
 - docker-compose
 
 # Running application
-1. In root folder execute command `pipenv install` to install dependencies
-2. 
 
-
+1. Execute command `docker-comopse up --build`
+2. In your browser access `localhost:8000`
