@@ -48,11 +48,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "rest_framework",
-    # It is required to add application this way
-    # as otherwise signals are not loaded
-    "secure_resource.apps.SecureResourceConfig",
+    "secure_resource",
     "user_agent",
     "users",
+    "home",
 ]
 
 MIDDLEWARE = [
@@ -137,19 +136,15 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
-
-STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
+# https://docs.djangoproject.com/en/1.9/howto/static-files/
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATIC_URL = "/static/"
-
-# STATICFILES_DIRS = (os.path.join(BASE_DIR, "staticfiles"),)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 
 LOGIN_REDIRECT_URL = "/"
 LOGIN_URL = "/login/"
-
 
 URL_EXPIRATION_TIME = env("URL_EXPIRATION_TIME", default=24 * 60 * 60)
 db_from_env = dj_database_url.config(conn_max_age=500)

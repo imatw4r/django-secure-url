@@ -33,7 +33,8 @@ class ElementRedirectListStatisticsViewSet(GenericViewSet, ListModelMixin):
 
     def list(self, request):
         qs = (
-            ElementRedirect.objects.values("created_at", "redirect_type")
+            self.get_queryset()
+            .values("created_at", "redirect_type")
             .annotate(count=Count("created_at"))
             .order_by("created_at", "redirect_type")
         )

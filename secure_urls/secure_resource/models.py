@@ -35,7 +35,7 @@ class SecureElement(models.Model):
         return self.password
 
     def get_absolute_url(self):
-        return reverse("element-detail", kwargs={"pk": self.pk})
+        return reverse("resources:element-detail", kwargs={"pk": self.pk})
 
     def increase_count(self):
         self.visited += 1
@@ -58,7 +58,7 @@ class ElementRedirect(models.Model):
     created_at = models.DateField(auto_now_add=True, editable=True)
 
     def get_absolute_url(self):
-        return reverse("element-redirect", kwargs={"pk": self.pk})
+        return reverse("resources:element-redirect", kwargs={"pk": self.pk})
 
     def get_password(self):
         return self.element.password
