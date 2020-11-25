@@ -1,6 +1,5 @@
 from django.urls import path, include
 
-from secure_resource.api.routes import router
 import secure_resource.views as views
 
 
@@ -20,5 +19,5 @@ urlpatterns = [
         views.SecureElementDetailView.as_view(),
         name="element-detail",
     ),
-    path("api/", include("secure_resource.api_routes")),
+    path("api/", include("secure_resource.api.urls")),
 ]
