@@ -32,8 +32,8 @@
 
 # Endpoints
 
-1. `/login` - login
-2. `/logout` - logout
+1. `login` - login
+2. `logout` - logout
 3. `api/url` - Secure URL API
 4. `api/file` - Secure File API
 5. `api/url/redirect/<pk>` - Url Redirect Retrieve API

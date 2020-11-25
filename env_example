@@ -9,3 +9,7 @@ POSTGRES_HOST=postgres
 ADMIN_USER=admin
 ADMIN_PASSWORD=admin
 ADMIN_EMAIL=admin@admin.com
+
+# Redirect expiration time [s]
+# 86400 = 24h
+URL_EXPIRATION_TIME=86400
