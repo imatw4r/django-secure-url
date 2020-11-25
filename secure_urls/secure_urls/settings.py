@@ -33,7 +33,7 @@ DEBUG = env("DEBUG")
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", ".herokuapp.com"]
 
 ADMIN_USER = env("ADMIN_USER", default="admin")
-ADMIN_PASSWORD = env("ADMIN_PASSWORD", default="admin@admin.com")
+ADMIN_PASSWORD = env("ADMIN_PASSWORD", default="admin")
 ADMIN_EMAIL = env("ADMIN_EMAIL", default="admin@admin.com")
 
 
