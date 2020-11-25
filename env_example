@@ -1,0 +1,11 @@
+DEBUG=False
+# Postgres config
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+POSTGRES_DB=postgres
+POSTGRES_HOST=postgres
+
+# Admin user config
+ADMIN_USER=admin
+ADMIN_PASSWORD=admin
+ADMIN_EMAIL=admin@admin.com

@@ -20,5 +20,5 @@ urlpatterns = [
         views.SecureElementDetailView.as_view(),
         name="element-detail",
     ),
-    path("element/api/", include(router.urls)),
+    path("api/", include("secure_resource.api_routes")),
 ]
