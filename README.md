@@ -39,3 +39,9 @@
 5. `api/url/redirect/<pk>` - Url Redirect Retrieve API
 6. `api/file/redirect/<pk>` - File Redirect Retrieve API
 7. `api/stats/overall` - File/Url count endpoint APi
+
+# Development
+
+> Warning:
+>
+> > After installing new dependency via pipenv install, remember to update requirements.txt by running `pipenv run pip freeze > requirements.txt`!
