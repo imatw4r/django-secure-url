@@ -26,9 +26,9 @@ Application can be accessed on **[Heroku](https://django-secure-urls.herokuapp.c
 # Running application
 
 0. Run `cp env_example .env`
-1. Execute command `docker-comopse up --build`
-2. Nginx server application on `localhost:8000`
-3. Gunicorn server application on `localhost`
+1. Run `docker-compose up --build`
+2. Nginx serves application on `localhost:8000`
+3. Gunicorn serves application on `localhost`
 
 > Warning
 >
@@ -48,4 +48,4 @@ Application can be accessed on **[Heroku](https://django-secure-urls.herokuapp.c
 
 > Warning:
 >
-> > After installing new dependency via pipenv install, remember to update requirements.txt by running `pipenv run pip freeze > requirements.txt`!
+> > After installing new dependency via `pipenv install`, remember to update requirements.txt by running `pipenv run pip freeze > requirements.txt`!
