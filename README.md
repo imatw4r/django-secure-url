@@ -24,14 +24,18 @@
 0. Run `cp env_example .env`
 1. Execute command `docker-comopse up --build`
 2. Nginx server application on `localhost:8000`
-3. Gunicorn server application on `localhost:8001`
+3. Gunicorn server application on `localhost`
+
+> Warning
+>
+> > Serving files with Gunicorn works only in DEBUG=True mode.
 
 # Endpoints
 
 1. `/login` - login
 2. `/logout` - logout
-3. `/api/url` - Secure URL API
-4. `/api/file` - Secure File API
+3. `api/url` - Secure URL API
+4. `api/file` - Secure File API
 5. `api/url/redirect/<pk>` - Url Redirect Retrieve API
 6. `api/file/redirect/<pk>` - File Redirect Retrieve API
 7. `api/stats/overall` - File/Url count endpoint APi
