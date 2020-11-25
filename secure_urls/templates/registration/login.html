@@ -1,3 +1,4 @@
+{% extends 'base.html' %} {% block content %}
 <p>
   Please login to use appliaction.<br />
   Default user: admin <br />
@@ -7,3 +8,4 @@
   {% csrf_token %} {{ form.as_p }}
   <button type="submit">Login</button>
 </form>
+{% endblock content %}

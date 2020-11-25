@@ -1,0 +1,109 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{% block title %}Django Secure Url{% endblock %}</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300"
+    />
+    <style>
+      body {
+        margin: 0px
+        background: #f9f2f2;
+        font: normal 300 18px "Roboto", sans-serif;
+      }
+
+      #menu-nav {
+        max-width: 1000px;
+        margin: 0px auto;
+        background-color: #2a2d30;
+        border-radius: 4px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      #navigation-bar ul {
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      #navigation-bar li {
+        float: left;
+        width: 20%;
+      }
+      #navigation-bar li:hover a::before {
+        right: 0;
+        left: 0;
+      }
+      #navigation-bar a {
+        color: #f2f2f2;
+        font-size: 20px;
+        text-decoration: none;
+        text-align: center;
+        padding: 20px 0;
+        display: block;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+      #navigation-bar a:hover {
+        color: #e74c3c;
+      }
+      #navigation-bar a::before {
+        content: "";
+        transition: all 0.4s ease-in-out;
+        position: absolute;
+        right: 50%;
+        left: 50%;
+        bottom: 0;
+        height: 2px;
+        background-color: #e74c3c;
+      }
+      #navigation-bar a:hover::before {
+        right: 0;
+        left: 0;
+      }
+
+      li {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="menu-nav">
+      <div id="navigation-bar">
+        <ul>
+          <li>
+            <a href="{% url 'home' %}"
+              ><i class="fa fa-home"></i><span>Home</span></a
+            >
+          </li>
+          <li>
+            <a href="{% url 'login' %}"
+              ><i class="fa fa-handshake"></i><span>Login</span></a
+            >
+          </li>
+          <li>
+            <a href="{% url 'logout' %}?next={% url 'home' %}"
+              ><i class="fa fa-user"></i><span>Logout</span></a
+            >
+          </li>
+          <li>
+            <a href="{% url 'resources:url-create' %}"
+              ><i class="fa fa-link"></i><span>Secure URL</span></a
+            >
+          </li>
+          <li>
+            <a href="{% url 'resources:file-create' %}"
+              ><i class="fa fa-file"></i> <span>Secure FILE</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <main>{% block content %} {% endblock %}</main>
+  </body>
+</html>
