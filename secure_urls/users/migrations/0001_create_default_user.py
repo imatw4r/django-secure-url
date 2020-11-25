@@ -5,8 +5,8 @@ from django.conf import settings
 from django.db import migrations
 
 DEFAULT_SUPERUSER_NAME = settings.ADMIN_USER
-DEFAULT_SUPERUSER_EMAIL = settings.ADMIN_PASSWORD
-DEFAULT_SUPERUSER_PASSWORD = settings.ADMIN_EMAIL
+DEFAULT_SUPERUSER_EMAIL = settings.ADMIN_EMAIL
+DEFAULT_SUPERUSER_PASSWORD = settings.ADMIN_PASSWORD
 
 
 def create_superuser(apps, schema_editor):
