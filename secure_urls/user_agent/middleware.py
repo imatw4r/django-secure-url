@@ -10,7 +10,7 @@ def store_user_agent(get_response):
                 user=request.user,
             )
 
-            agent.user_agent = request.META["HTTP_USER_AGENT"]
+            agent.user_agent = request.META.get("HTTP_USER_AGENT", "")
             agent.save()
         return response
 
